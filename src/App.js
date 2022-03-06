@@ -1,9 +1,9 @@
 import './App.css'
-
+import Table from './components/Tables/Table'
 function App() {
   return (
     <div className="App">
-      <h1>React Data tables</h1>
+      <Table />
     </div>
   )
 }
