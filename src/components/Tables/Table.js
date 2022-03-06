@@ -31,9 +31,9 @@ function Table() {
   ]
 
   useEffect(() => {
-    getAlbumList()
+    getPhotos()
   }, [])
-  const getAlbumList = async () => {
+  const getPhotos = async (page) => {
     try {
       const response = await axios.get(api)
       if (response?.data?.length > 0) {
@@ -70,7 +70,7 @@ function Table() {
           onRowClick={onRowClick}
           onSelectionChange={onSelectionChange}
           hideFooter={false}
-          hideFooterPagination={true}
+          hideFooterPagination={false}
         />
       </div>
     )
